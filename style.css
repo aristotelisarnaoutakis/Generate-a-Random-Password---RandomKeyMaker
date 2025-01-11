@@ -1,0 +1,499 @@
+/* General Body Styling */
+body {
+  background: #252422;
+  color: #FFFCF2;
+  min-width: auto;
+  width: auto;
+  height: auto; 
+  margin: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: #eb5e28;
+  color: #252422;
+  border-radius: 0PX;
+}
+
+.logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  height: 100%;
+  width: 250px;
+  background-color: #252422;
+  color: #FFFCF2;
+  display: flex;
+  overflow-y: auto; /* Prevent vertical overflow */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.5s ease;
+  z-index: 1000;
+}
+
+.menu.open {
+  right: 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu ul li {
+  margin: 20px 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #FFFCF2;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #eb5e28;
+}
+
+
+/* Menu Icon Styles */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  transition: transform 0.8s ease;
+  position: relative; /* Ensure proper positioning */
+  z-index: 2000; /* Higher than the menu */
+}
+
+.menu-icon div {
+  height: 5px;
+  background-color: #252422;
+  border-radius: 5px;
+  transition: transform 0.8s ease;
+}
+
+
+.menu-icon.open {
+  transform: rotate(90deg);
+  transition: transform 0.8s ease;
+}
+
+.menu-icon.open div:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+  transition: transform 0.8s ease;
+}
+
+.menu-icon.open div:nth-child(2) {
+  opacity: 0; /* Set opacity to 0 when the menu is open */
+  transition: opacity 0.8s ease; /* Transition for opacity */
+}
+
+.menu-icon div:nth-child(2) {
+  opacity: 1; /* Default opacity when the menu is closed */
+  transition: opacity 0.8s ease; /* Transition for opacity */
+}
+
+.menu-icon.open div:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+  transition: transform 0.8s ease;
+}
+
+/* Close Button Styles */
+.close-menu {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  background: transparent;
+  color: #FFFCF2;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1500;
+  transition: color 0.3s ease;
+}
+
+.close-menu:hover {
+  color: #eb5e28;
+}
+
+
+
+/* Main Content Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Title Section */
+.title {
+  font-family: "Orbitron", serif;
+  font-weight: 1px;
+  color: #FFFCF2;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  font-size: x-large;
+  text-align: center;
+}
+
+.title span{
+  color: #eb5e28;
+}
+
+/* Input Bar and Button */
+.bar {
+  font-family: "Orbitron", serif;
+  font-size: x-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFCF2;
+  height: 6rem;
+  width: 20rem;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 3px #eb5e28;
+}
+
+.bar button {
+  font-family: "Orbitron", serif;
+  font-weight: 500;
+  color: #eb5e28;
+  font-size: medium;
+  border: 0px;
+  width: 5rem;
+  height: 3rem;
+  border-radius: 10px;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  cursor: pointer; 
+  transition: 0.5s;
+  box-shadow: 0px 0px 0px 3px #eb5e28;
+  background-color: #FFFCF2;
+}
+
+.bar button:hover {
+  transition: 0.5s;
+  box-shadow: 0px 0px 0px 3px #eb5e28;
+  color: #FFFCF2;
+  background-color: #eb5e28;
+}
+
+/* Text Selection Styles */
+::selection {
+  background: #eb5e28;
+}
+
+/* Password Input Box */
+.boxbar {
+  font-size: x-large;
+  font-weight: 500;
+  background-color: #FFFCF2;
+  width: 10rem;
+  color: #eb5e28;
+  border: 0px;
+  font-family: "Orbitron", serif;
+  font-size: medium;
+  outline: 0px;
+}
+
+/* Slider Component */
+.slider {
+  font-weight: 500;
+  font-family: "Orbitron", serif;
+  background-color: #FFFCF2;
+  color: #252422;
+  border: 0;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20rem;
+  height: 6rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  border-radius: 10px;
+  font-size: 22px;
+  box-shadow: 0px 0px 0px 3px #eb5e28;
+  transition: 0.5s;
+}
+
+.slider label {
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #252422;
+}
+
+.slider span {
+  color: #eb5e28;
+  font-weight: 500px;
+  transition: 0.5s;
+  min-width: 2.5rem; /* Ensure number area remains consistent */
+  text-align: center;
+}
+
+input[type="range"] {
+  margin-top: 0.5rem;
+  -webkit-appearance: none;
+  color: #eb5e28;
+  justify-content: center;
+  background: #252422;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.slider:hover {
+  transition: 0.5s;
+  box-shadow: 0 0 #eb5e28;
+  color: #FFFCF2;
+  background-color: #eb5e28;
+  box-shadow: 0px 0px 0px 3px #FFFCF2;
+}
+
+.slider:hover span {
+  transition: 0.5s;
+  color: #FFFCF2; /* Change to your desired hover color */
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  color: #eb5e28;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  width: 15rem;
+  height: 0.5rem; 
+  background: #252422;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px; 
+  height: 22px;
+  border-radius: 50%;
+  background: #FFFCF2;
+  border: #252422;
+  box-shadow: 0px 0px 0px 3px #252422;
+}
+
+/* Options Section */
+.options {
+  font-weight: 500;
+  font-family: "Orbitron", serif;
+  background-color: #FFFCF2;
+  color: #252422;
+  border: 0;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20rem;
+  height: 22rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: large;
+  box-shadow: 0px 0px 0px 3px #eb5e28;
+  transition: 0.5s;
+}
+
+.options label.characters {
+  font-weight: 800px;
+  font-size: x-large;
+  color: #eb5e28;
+  transition: 0.5s;
+}
+
+.options:hover label.characters {
+  color: #FFFCF2;
+  transition: 0.5s;
+}
+
+.options:hover {
+  transition: 0.5s;
+  box-shadow: 0 0 #eb5e28;
+  color: #FFFCF2;
+  background-color: #eb5e28;
+  box-shadow: 0px 0px 0px 3px #FFFCF2;
+}
+
+/* Checkbox Customization */
+input[type="checkbox"] {
+  appearance: none; /* Remove the default checkbox styling */
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-top: 1rem;
+  border: 2px solid #eb5e28; /* Add a custom border */
+  border-radius: 5px; /* Make it rounded */
+  background: #FFFCF2; /* Default background color */
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:hover {
+  box-shadow: 0 0 5px #eb5e28; /* Add hover effect */
+}
+
+input[type="checkbox"]:checked {
+  background: #eb5e28; /* Change background on check */
+  border: 2px solid #FFFCF2; /* Change border color */
+}
+
+input[type="checkbox"]:checked::after {
+  content: ''; /* Add a custom checkmark or circle */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: #FFFCF2; /* Custom inner color */
+  border-radius: 50%; /* Make it a circle */
+  transform: translate(-50%, -50%); /* Center the circle */
+  box-shadow: 0 0 3px #252422; /* Optional shadow */
+}
+
+/* Shake Animation */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+.options.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Generate Button */
+.generate button {
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 6rem;
+  width: 20rem;
+  background-color: #eb5e28;
+  text-align: center;
+  color: #252422;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Orbitron", serif;
+  border-radius: 10px;
+  outline: 0px;
+  border: 0px;
+  font-size: x-large;
+  transition: 0.5s;
+  box-shadow: 0px 0px 0px 3px #eb5e28;
+  background-color: #FFFCF2;
+}
+
+.generate button:hover {
+  box-shadow: 0 0 #eb5e28;
+  transition: 0.5s;
+  color: #FFFCF2;
+  background-color: #eb5e28;
+  box-shadow: 0px 0px 0px 3px #FFFCF2;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #FFFCF2;
+  color: #252422;
+  padding: 0px;
+  text-align: center;
+  padding: 20px 20px;
+  border-radius: 0px;
+  margin-top: 160px;
+  margin-bottom: 0px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+footer img {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer nav {
+  transition: 0.2s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+footer nav a {
+  transition: 0.2s ease;
+  display: flex;
+  flex-direction: row;
+  color: #252422;
+  text-align: center;
+  justify-content: space-around;
+  margin: 0 10px;
+}
+
+footer a {
+  color: #eb5e28;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  transition: 0.2s ease;
+  color: #eb5e28;
+}
