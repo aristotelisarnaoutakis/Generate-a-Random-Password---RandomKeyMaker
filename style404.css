@@ -43,7 +43,7 @@ body {
 /* MAIN CONTENT */
 .content{
     background-color: #252422;
-    height: 970px;
+    height: 900px;
     width: auto;
     display: flex;
     flex-direction: column;
